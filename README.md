@@ -3,7 +3,47 @@ This repository contains inference code for [SceneScript](https://www.projectari
 
 <p align="center"><img src="imgs/scenescript_diagram.png"/></p>
 
-## Installation
+## Environment Setup (by Ben)
+
+Tested with a Ryzen 5600X, GTX 1080, on WSL2 Ubuntu.
+
+### Prerequisites: Linux (Ubuntu 22.04.3 LTS), nvcc version Build cuda_12.8.r12.8/compiler.35404655_0, CUDA Version: 12.7, g++ version 11.4.0
+
+CUDA is required unfortunately :(
+
+#### Create conda environment
+```
+conda create -n scenescript python=3.10
+
+conda activate scenescript
+```
+#### Required to build torchsparse
+```
+conda install bioconda::google-sparsehash
+
+git clone https://github.com/mit-han-lab/torchsparse.git
+
+cd torchsparse
+
+# This will take a while...
+python setup.py install
+```
+
+#### Install other dependencies
+I may be missing one or two, but the remaining dependencies should be pip-installable.
+```
+pip install numpy pandas scipy jupyter plotly einops omegaconf projectaria-tools nbformat
+```
+
+## Additional Setup (by Ben)
+
+Access the model weights [here](https://www.projectaria.com/scenescript/#download-dataset).
+
+Also follow the instructions under Example Data in this README.
+
+## Installation (Original instructions)
+
+**Note from Ben**: I found these instructions to be a little problematic because of torchsparse dependency issues.
 
 The code can be installed via `conda`. Please follow the instructions [here](https://docs.anaconda.com/anaconda/install/index.html) to install Anaconda for your machine.
 
