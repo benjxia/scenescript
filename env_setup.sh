@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prerequisites: Linux, nvcc version Build cuda_12.8.r12.8/compiler.35404655_0, CUDA Version: 12.7, g++ version 11.4.0
 # g++ version 11.4.0
 

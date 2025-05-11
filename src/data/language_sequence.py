@@ -387,3 +387,6 @@ class LanguageSequence:
         lang_seq.assign_doors_windows_to_walls()
 
         return lang_seq
+
+    def __str__(self):
+        return str([str(e) for e in self.entities])

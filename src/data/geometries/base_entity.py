@@ -63,3 +63,6 @@ class BaseEntity(ABC):
             return self.lex_sort_key()
         elif sort_type == "random":
             return self.random_sort_key()
+
+    def __str__(self):
+        return self.COMMAND_STRING + ': ' + str(self.params)
